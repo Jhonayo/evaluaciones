@@ -1,10 +1,10 @@
 package modulo_4.sesion_4.drilling;
 
 public class Auto {
-    private String marca;
-    private String modelo;
-    private String color;
-    private int velocidadMaxima;
+    private final String marca;
+    private final String modelo;
+    private final String color;
+    private final int velocidadMaxima;
     private boolean encendido = false;
     private int velocidadActual = 0;
 
@@ -38,7 +38,7 @@ public class Auto {
             System.out.printf("Su velocidad actual es %d km/h...\n apagando el auto\n", velocidadActual);
             encendido = false;
             System.out.println("El auto ha sido apagado.");
-        } else if (encendido && velocidadActual == 0) {
+        } else if (encendido) {
             System.out.println("Apagando el auto...");
             encendido = false;
             mensaje.menuTimeResponse();
