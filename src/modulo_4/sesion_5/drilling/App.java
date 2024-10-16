@@ -1,7 +1,5 @@
 package modulo_4.sesion_5.drilling;
 
-import modulo_4.sesion_4.drilling.Mensajes;
-
 import java.util.Scanner;
 
 public class App {
@@ -9,42 +7,39 @@ public class App {
         Scanner sc = new Scanner(System.in);
 
         // Se instancia mensajes para mensaje de bienvenida y menu
-        Mensajes mensajes = new Mensajes();
-        mensajes.mensajeBienvenida();
+       MensajesApp mensajesApp = new MensajesApp();
+        Productos listaProductos = new Productos();
 
-
-        /*
+        mensajesApp.mensajeBienvenida();
         boolean salir = false;
         while (!salir) {
-            mensajes.mostrarMenu();
+            mensajesApp.mostrarMenu();
             int opcion = sc.nextInt();
 
             switch (opcion) {
                 case 1:
-                    // metodo de ver productos
+                    // Ver productos
+                    listaProductos.mostrarProductos();
                     break;
                 case 2:
-                    // metodo de agregar productos
+                    // Agregar producto
+                    listaProductos.agregarProducto(sc);
                     break;
                 case 3:
-                    //metodo de modificar productos
+                    // Modificar producto
+                    listaProductos.modificarProducto(sc);
                     break;
-                case 5:
+                case 4:
                     System.out.println("Saliendo del sistema...");
+                    mensajesApp.menuSleepResponse();
                     salir = true;
-                    mensaje.mensajeSleepResponse();
-                    Systen.out.println("Adios...")
                     break;
                 default:
                     System.out.println("Opción no válida.");
                     break;
             }
         }
-
-        sc.close();*/
-
-
-
+        sc.close();
 
     }
 }
