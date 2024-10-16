@@ -15,6 +15,23 @@ public class Arreglos {
 
         String[] asignaturas = new String[5];
         double[] promedios = new double[5];
+        double aux;
+
+        for(int i = 0; i < asignaturas.lenght; i++){
+        System.out.println("Ingrese el nombre de la asignatura")        
+        asignaturas [i] = sc.next();
+        System.out.printf("Ingrese el promedio de la asignatura %d\n", asignaturas [i]);
+        promedis[i] = sc.nextInt();
+        sc.nextLine();
+        }
+
+        System.out.println("Sus notas son las siguientes: ");
+        for(int i = 0; i< asignaturas.lenght; i++){
+                System.out.printf("\n%s = %f \n",asignaturas[i],promedios[i]);
+                aux +=promedios[i];
+        }
+        System.out.println("Su promedio general es = " + (aux/promedios.lenght));
+
 
     }
 }
