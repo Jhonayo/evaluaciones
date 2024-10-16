@@ -9,38 +9,31 @@ public class App {
         Scanner sc = new Scanner(System.in);
 
         // Se instancia mensajes para mensaje de bienvenida y menu
-        modulo_4.sesion_4.drilling.Mensajes mensajes = new Mensajes();
+        Mensajes mensajes = new Mensajes();
         mensajes.mensajeBienvenida();
 
 
         /*
-        *         boolean salir = false;
+        boolean salir = false;
         while (!salir) {
             mensajes.mostrarMenu();
             int opcion = sc.nextInt();
 
             switch (opcion) {
                 case 1:
-                    auto.encender();
+                    // metodo de ver productos
                     break;
                 case 2:
-                    auto.apagar();
+                    // metodo de agregar productos
                     break;
                 case 3:
-                    if(auto.isEncendido()){
-                        System.out.println("¿Cuánto desea acelerar?");
-                        int incremento = sc.nextInt();
-                        auto.acelerar(incremento);
-                    }else {
-                        System.out.println("No se puede acelerar, el auto está apagado.");
-                    }
-                    break;
-                case 4:
-                    auto.mostrarInformacion();
+                    //metodo de modificar productos
                     break;
                 case 5:
                     System.out.println("Saliendo del sistema...");
                     salir = true;
+                    mensaje.mensajeSleepResponse();
+                    Systen.out.println("Adios...")
                     break;
                 default:
                     System.out.println("Opción no válida.");
