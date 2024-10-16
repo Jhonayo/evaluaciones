@@ -1,7 +1,5 @@
 package modulo_4.sesion_5.drilling;
 
-import modulo_4.sesion_4.drilling.Mensajes;
-
 import java.util.Scanner;
 
 public class App {
@@ -9,37 +7,31 @@ public class App {
         Scanner sc = new Scanner(System.in);
 
         // Se instancia mensajes para mensaje de bienvenida y menu
-        modulo_4.sesion_4.drilling.Mensajes mensajes = new Mensajes();
-        mensajes.mensajeBienvenida();
+       MensajesApp mensajesApp = new MensajesApp();
+        Productos listaProductos = new Productos();
 
-
-        /*
-        *         boolean salir = false;
+        mensajesApp.mensajeBienvenida();
+        boolean salir = false;
         while (!salir) {
-            mensajes.mostrarMenu();
+            mensajesApp.mostrarMenu();
             int opcion = sc.nextInt();
 
             switch (opcion) {
                 case 1:
-                    auto.encender();
+                    // Ver productos
+                    listaProductos.mostrarProductos();
                     break;
                 case 2:
-                    auto.apagar();
+                    // Agregar producto
+                    listaProductos.agregarProducto(sc);
                     break;
                 case 3:
-                    if(auto.isEncendido()){
-                        System.out.println("¿Cuánto desea acelerar?");
-                        int incremento = sc.nextInt();
-                        auto.acelerar(incremento);
-                    }else {
-                        System.out.println("No se puede acelerar, el auto está apagado.");
-                    }
+                    // Modificar producto
+                    listaProductos.modificarProducto(sc);
                     break;
                 case 4:
-                    auto.mostrarInformacion();
-                    break;
-                case 5:
                     System.out.println("Saliendo del sistema...");
+                    mensajesApp.menuSleepResponse();
                     salir = true;
                     break;
                 default:
@@ -47,11 +39,7 @@ public class App {
                     break;
             }
         }
-
-        sc.close();*/
-
-
-
+        sc.close();
 
     }
 }
