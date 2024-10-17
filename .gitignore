@@ -66,6 +66,10 @@ gradle-wrapper.properties
 .AppleDouble
 .LSOverride
 
+###Tareas###
+*.zip
+*.rar
+
 # Windows
 Thumbs.db
 ehthumbs.db
